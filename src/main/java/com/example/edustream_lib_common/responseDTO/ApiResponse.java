@@ -1,4 +1,4 @@
-package com.example.edustream_lib_common.dto;
+package com.example.edustream_lib_common.responseDTO;
 
 import lombok.*;
 
