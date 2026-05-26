@@ -13,6 +13,7 @@ public class ApiResponse<T> {
     private T data;
 
 
+    // Data only
     public  static <T> ApiResponse<T> success(T data) {
         return ApiResponse.<T>builder()
                 .success(true)
@@ -20,6 +21,16 @@ public class ApiResponse<T> {
                 .build();
     }
 
+    // Message only
+    public  static <T> ApiResponse<T> success(String message) {
+        return ApiResponse.<T>builder()
+                .success(true)
+                .message(message)
+                .data(null)
+                .build();
+    }
+
+    // Data + message
     public  static <T> ApiResponse<T> success(T data, String message) {
         return ApiResponse.<T>builder()
                 .success(true)
